@@ -2,10 +2,10 @@ name: Build and Push Docker Image
 
 on:
   push:
-    branches: [main]        # se ejecuta cuando el PR de dev -> main se mergea
+    branches: [main]
   pull_request:
-    branches: [main]        # valida que compile ANTES de mergear, sin publicar
-  workflow_dispatch: {}     # permite ejecutarlo manualmente desde la pestaña Actions
+    branches: [main]
+  workflow_dispatch: {}
 
 env:
   IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/frontend-proyecto-plataformas
